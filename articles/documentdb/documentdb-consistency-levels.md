@@ -14,7 +14,7 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="article"
-	ms.date="06/15/2016"
+	ms.date="06/20/2016"
 	ms.author="mimig"/>
 
 # Consistency levels in DocumentDB
@@ -48,7 +48,7 @@ You can configure a default consistency level on your database account that appl
 - Bounded staleness offers total global order except within the “staleness window”. Note that the monotonic read guarantees exists within a region both inside and outside the “staleness window”. 
 - Bounded staleness provides a stronger consistency guarantee than session or eventual consistency. For globally distributed applications, we recommend you use bounded staleness for scenarios where you would like to have strong consistency but also want 99.99% availability and low latency. 
 - DocumentDB accounts that are configured with bounded staleness consistency can associate any number of Azure regions with their DocumentDB account. 
-- The cost of a read operation (in terms of RUs consumed) with strong consistency is the higher than session and eventual consistency, but the same as strong consistency.
+- The cost of a read operation (in terms of RUs consumed) with bounded staleness is the higher than session and eventual consistency, but the same as strong consistency.
 
 **Session**: 
 
